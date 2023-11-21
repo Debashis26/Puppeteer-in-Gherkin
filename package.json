@@ -6,7 +6,7 @@
   "scripts": {
     "test": "cucumber-js",
     "test:config": "cucumber-js --require-module ts-node/register --require cucumber.js --require src/e2e/steps/*steps.ts src/e2e/features/*.feature",
-    "test:puppeteer": "cucumber-js --require-module ts-node/register --require src/e2e/steps/*steps.ts --require src/e2e/support/puppeteer.ts src/e2e/features/*.feature"
+    "test:puppeteer": "cucumber-js --require-module ts-node/register --require src/e2e/steps/*steps.ts --require src/e2e/support/puppeteer.ts src/e2e/features/*.feature "
   },
   "keywords": [],
   "author": "",

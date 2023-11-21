@@ -22,5 +22,10 @@ Then("I should see search results", async function () {
   if (page) {
     await page.waitForSelector("h3");
     const searchResults = await page.$$("h3");
+
+    if (searchResults.length <0) {
+      throw new Error("No search results found");
+    }
   }
 });
+
