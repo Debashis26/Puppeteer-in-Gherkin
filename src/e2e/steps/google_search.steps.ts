@@ -1,4 +1,10 @@
-import { Given, Then, When, browser, page } from "../support/puppeteerSupport";
+import {
+  Given,
+  Then,
+  When,
+  browser,
+  page,
+} from "../../e2e/support/puppeteerSupport";
 
 Given("I am on the Google search page", async function () {
   if (page) {
@@ -7,7 +13,7 @@ Given("I am on the Google search page", async function () {
   }
 });
 
-When('I search for "debashisbadajena"', async function () {
+When('I search for "debashis badajena"', async function () {
   if (page) {
     const searchSelector = 'textarea[title="Search"]';
     await page.waitForSelector(searchSelector);
@@ -23,9 +29,8 @@ Then("I should see search results", async function () {
     await page.waitForSelector("h3");
     const searchResults = await page.$$("h3");
 
-    if (searchResults.length <0) {
+    if (searchResults.length < 0) {
       throw new Error("No search results found");
     }
   }
 });
-
